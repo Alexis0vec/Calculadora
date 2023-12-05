@@ -57,62 +57,79 @@
       <p class="result">Pĸ = <span id="resultado">&nbsp;</span></p>
     </div>
 <!--  -->
-    <h4>Probabilidad ocupación del sistema, utilización y espera del usuario para ser atendido en cola</h4>
+    <h4>Probabilidad de que un usuario que llega no tenga que esperar</h4>
     <div class="formula-container">
-      <!-- <p class="formula-description">Fórmula del cálculo:</p>
-      <p class="formula">PNE = λ / μ</p> -->
       <p class="result-description">Resultado:</p>
       <p class="result">Pɴɛ = <span id="resultado">&nbsp;</span></p>
     </div>
     <!--  -->
-    <h4>Probabilidad ocupación del sistema, utilización y espera del usuario para ser atendido en cola</h4>
+    <h4>Número esperado de clientes en el sistema</h4>
     <div class="formula-container">
-      <!-- <p class="formula-description">Fórmula del cálculo:</p>
-      <p class="formula">PNE = λ / μ</p> -->
       <p class="result-description">Resultado:</p>
-      <p class="result">Pɴɛ = <span id="resultado">&nbsp;</span></p>
+      <p class="result">L = <span id="resultado">&nbsp;</span></p>
     </div>
     <!--  -->
-    <h4>Probabilidad ocupación del sistema, utilización y espera del usuario para ser atendido en cola</h4>
+    <h4>Número esperado de clientes en la cola</h4>
     <div class="formula-container">
-      <!-- <p class="formula-description">Fórmula del cálculo:</p>
-      <p class="formula">PNE = λ / μ</p> -->
       <p class="result-description">Resultado:</p>
-      <p class="result">Pɴɛ = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Lq = <span id="resultado">&nbsp;</span></p>
     </div>
     <!--  -->
-    <h4>Probabilidad ocupación del sistema, utilización y espera del usuario para ser atendido en cola</h4>
+    <h4>Número esperado de clientes en la cola no vacía</h4>
     <div class="formula-container">
-      <!-- <p class="formula-description">Fórmula del cálculo:</p>
-      <p class="formula">PNE = λ / μ</p> -->
       <p class="result-description">Resultado:</p>
-      <p class="result">Pɴɛ = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Ln = <span id="resultado">&nbsp;</span></p>
     </div>
     <!--  -->
-    <h4>Probabilidad ocupación del sistema, utilización y espera del usuario para ser atendido en cola</h4>
+    <h4>Tiempo esperado en el sistema</h4>
     <div class="formula-container">
-      <!-- <p class="formula-description">Fórmula del cálculo:</p>
-      <p class="formula">PNE = λ / μ</p> -->
       <p class="result-description">Resultado:</p>
-      <p class="result">Pɴɛ = <span id="resultado">&nbsp;</span></p>
+      <p class="result">W = <span id="resultado">&nbsp;</span></p>
     </div>
     <!--  -->
-    <h4>Probabilidad ocupación del sistema, utilización y espera del usuario para ser atendido en cola</h4>
+    <h4>Tiempo esperado en cola</h4>
     <div class="formula-container">
-      <!-- <p class="formula-description">Fórmula del cálculo:</p>
-      <p class="formula">PNE = λ / μ</p> -->
       <p class="result-description">Resultado:</p>
-      <p class="result">Pɴɛ = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Wq = <span id="resultado">&nbsp;</span></p>
     </div>
     <!--  -->
-    <h4>Probabilidad ocupación del sistema, utilización y espera del usuario para ser atendido en cola</h4>
+    <h4>Tiempo esperado en cola para colas no vacías</h4>
     <div class="formula-container">
-      <!-- <p class="formula-description">Fórmula del cálculo:</p>
-      <p class="formula">PNE = λ / μ</p> -->
       <p class="result-description">Resultado:</p>
-      <p class="result">Pɴɛ = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Wn = <span id="resultado">&nbsp;</span></p>
     </div>
-
+  </div>
+  <!--  -->
+  <div class="calculator">
+    <div class="box">
+       <label for="input1">n :</label>
+      <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+      title="Ingresa números enteros o decimales" required placeholder="Ingrese n">
+      <br>
+      <button onclick="calcularP()">Calcular</button>
+    </div>
+    <!--  -->
+    <h4>La probabilidad de hallar exactamente n clientes dentro del sistema:</h4>
+    <div class="formula-container">
+      <p class="result-description">Resultado:</p>
+      <p class="result">Pn para n >= k = <span id="resultado">&nbsp;</span></p>
+    </div>
+  </div>
+<!--  -->
+  <div class="calculator">
+    <h2>Costos</h2>
+    <div class="box">
+      <label for="input1">λ :</label>
+      <input type="number" id="input1" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+      title="Ingresa números enteros o decimales" required placeholder="Ingrese λ">
+      <label for="input2">µ :</label>
+      <input type="number" id="input2" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+      title="Ingresa números enteros o decimales" required placeholder="Ingrese μ">
+      <label for="input3">k :</label>
+      <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+      title="Ingresa números enteros o decimales" required placeholder="Ingrese k">
+      <br>
+      <button onclick="calcularP()">Calcular</button>
   </div>
   <script src="/Models/js/script.js"></script>
 </body>
