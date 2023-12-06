@@ -11,17 +11,11 @@
     <ul>
       <li><a href="/index.html">PICS_M/M/1</a></li>
       <li><a href="mm3.html">M/M/3</a></li>
-      <!-- Agrega opciones para otros modelos según sea necesario -->
     </ul>
   </nav>
   <div class="calculator">
     <h1>Calculadora</h1>
     <div class="box">
-      <!-- <label for="lambda">Ingrese λ:</label>
-      <input type="text" id="lambda" placeholder="Ingrese λ">
-      <label for="mu">Ingrese μ:</label>
-      <input type="text" id="mu" placeholder="Ingrese μ">
-       -->
       <label for="input1">λ :</label>
       <input type="number" id="input1" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
       title="Ingresa números enteros o decimales" required placeholder="Ingrese λ">
@@ -32,104 +26,128 @@
       <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
       title="Ingresa números enteros o decimales" required placeholder="Ingrese k">
       <br>
-      <button onclick="calcularP()">Calcular</button>
-
+      <button onclick="calculoUno()">Calcular</button>
     </div>
 
     <h4>Probabilidad de sistema vacío, usuarios sin espera o atención inmediata, excluyendo espera en cola</h4>
-    <!-- <label for="lambda">Ingrese λ:</label>
-    <input type="text" id="lambda" placeholder="Ingrese λ">
-    <label for="mu">Ingrese μ:</label>
-    <input type="text" id="mu" placeholder="Ingrese μ"> -->
-    <!-- <button onclick="calcularP0()">Calcular P₀</button> -->
     <div class="formula-container">
-      <!-- <p class="formula-description">Fórmula del cálculo:</p>
-      <p class="formula">P₀ = 1 - (λ / μ)</p> -->
       <p class="result-description">Resultado:</p>
-      <p class="result">P₀ = <span id="formula">&nbsp;</span></p>
+      <p class="result">P₀ = <span id="P0">&nbsp;</span></p>
     </div>
-<!--  -->
+
     <h4>Probabilidad ocupación del sistema, utilización y espera del usuario para ser atendido en cola</h4>
     <div class="formula-container">
-      <!-- <p class="formula-description">Fórmula del cálculo:</p>
-      <p class="formula">P = λ / μ</p> -->
       <p class="result-description">Resultado:</p>
-      <p class="result">Pĸ = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Pĸ = <span id="Pk">&nbsp;</span></p>
     </div>
-<!--  -->
+
     <h4>Probabilidad de que un usuario que llega no tenga que esperar</h4>
     <div class="formula-container">
       <p class="result-description">Resultado:</p>
-      <p class="result">Pɴɛ = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Pɴɛ = <span id="PNE">&nbsp;</span></p>
     </div>
-    <!--  -->
+   
     <h4>Número esperado de clientes en el sistema</h4>
     <div class="formula-container">
       <p class="result-description">Resultado:</p>
-      <p class="result">L = <span id="resultado">&nbsp;</span></p>
+      <p class="result">L = <span id="L">&nbsp;</span></p>
     </div>
-    <!--  -->
+    
     <h4>Número esperado de clientes en la cola</h4>
     <div class="formula-container">
       <p class="result-description">Resultado:</p>
-      <p class="result">Lq = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Lq = <span id="Lq">&nbsp;</span></p>
     </div>
-    <!--  -->
+    
     <h4>Número esperado de clientes en la cola no vacía</h4>
     <div class="formula-container">
       <p class="result-description">Resultado:</p>
-      <p class="result">Ln = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Ln = <span id="Ln">&nbsp;</span></p>
     </div>
-    <!--  -->
+   
     <h4>Tiempo esperado en el sistema</h4>
     <div class="formula-container">
       <p class="result-description">Resultado:</p>
-      <p class="result">W = <span id="resultado">&nbsp;</span></p>
+      <p class="result">W = <span id="W">&nbsp;</span></p>
     </div>
-    <!--  -->
+    
     <h4>Tiempo esperado en cola</h4>
     <div class="formula-container">
       <p class="result-description">Resultado:</p>
-      <p class="result">Wq = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Wq = <span id="Wq">&nbsp;</span></p>
     </div>
-    <!--  -->
+    
     <h4>Tiempo esperado en cola para colas no vacías</h4>
     <div class="formula-container">
       <p class="result-description">Resultado:</p>
-      <p class="result">Wn = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Wn = <span id="Wn">&nbsp;</span></p>
     </div>
   </div>
-  <!--  -->
+  
   <div class="calculator">
     <div class="box">
-       <label for="input1">n :</label>
-      <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+       <label for="input4">n :</label>
+      <input type="number" id="input4" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
       title="Ingresa números enteros o decimales" required placeholder="Ingrese n">
       <br>
-      <button onclick="calcularP()">Calcular</button>
+      <button onclick="calcularResultado2()">Calcular</button>
     </div>
-    <!--  -->
+    
     <h4>La probabilidad de hallar exactamente n clientes dentro del sistema:</h4>
     <div class="formula-container">
       <p class="result-description">Resultado:</p>
-      <p class="result">Pn para n >= k = <span id="resultado">&nbsp;</span></p>
+      <p class="result">Pn para n >= k = <span id="Pn">&nbsp;</span></p>
     </div>
   </div>
 <!--  -->
   <div class="calculator">
     <h2>Costos</h2>
     <div class="box">
-      <label for="input1">λ :</label>
-      <input type="number" id="input1" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-      title="Ingresa números enteros o decimales" required placeholder="Ingrese λ">
-      <label for="input2">µ :</label>
-      <input type="number" id="input2" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-      title="Ingresa números enteros o decimales" required placeholder="Ingrese μ">
-      <label for="input3">k :</label>
-      <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-      title="Ingresa números enteros o decimales" required placeholder="Ingrese k">
-      <br>
-      <button onclick="calcularP()">Calcular</button>
+      <label for="input5">Horas :</label>
+      <input type="number" id="input5" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+      title="Ingresa números enteros o decimales" required placeholder="Ingrese horas">
+      <label for="input6">CTE :</label>
+      <input type="number" id="input6" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+      title="Ingresa números enteros o decimales" required placeholder="Ingrese CTE">
+      <label for="input7">CTS :</label>
+      <input type="number" id="input7" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+      title="Ingresa números enteros o decimales" required placeholder="Ingrese CTS">
+      <label for="input8">CTSE :</label>
+      <input type="number" id="input8" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+      title="Ingresa números enteros o decimales" required placeholder="Ingrese CTSE">
+      <label for="input9">CS :</label>
+      <input type="number" id="input9" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+      title="Ingresa números enteros o decimales" required placeholder="Ingrese CS">
+      <br />
+      <button onclick="calcularResultado3()">Calcular</button>
+    </div>
+          
+    <div class="formula-container">
+      <p class="result-description">Resultado:</p>
+      <p class="result">CT(TE) = <span id="CTTE">&nbsp;</span></p>
+    </div>  
+      
+    <div class="formula-container">
+      <p class="result-description">Resultado:</p>
+      <p class="result">CT(TS) = <span id="CTTS">&nbsp;</span></p>
+    </div>  
+
+    <div class="formula-container">
+      <p class="result-description">Resultado:</p>
+      <p class="result">CT(TSE) = <span id="CTTSer">&nbsp;</span></p>
+    </div>  
+      
+    <div class="formula-container">
+      <p class="result-description">Resultado:</p>
+      <p class="result">CT(S) = <span id="CTS">&nbsp;</span></p>
+    </div>  
+<br />
+    <h4>Costo Total Diario del Sistema :</h4>
+    <div class="formula-container">
+      <p class="result-description">Resultado:</p>
+      <p class="result">CT = <span id="CT">&nbsp;</span></p>
+    </div> 
+
   </div>
   <script src="/Models/js/script.js"></script>
 </body>

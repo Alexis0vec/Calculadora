@@ -2,10 +2,12 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   background-color: #fefefe;
+  color: white;
 }
 
 .model-menu {
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: #20c67a;
   overflow: hidden;
   position: fixed;
   width: 100%;
@@ -26,19 +28,22 @@ body {
 .model-menu a {
   display: block;
   color: white;
+  /* color: #333; */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .model-menu a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: white;
+  /* color: black; */
+  color: #20c67a;
 }
 
 .calculator {
   text-align: center;
-  background-color: #eee;
+  /* background-color: #eee; */
+  background-color: #333;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -46,9 +51,10 @@ body {
 
 .calculator h1{
   margin-top: 5%;
+  color: #fff;
 }
 
-.calculator h1{
+.calculator h2{
   margin-top: 0;
 }
 
@@ -72,13 +78,18 @@ button {
 }
 
 button:hover {
-  background-color: #010a14;
+  /* background-color: #010a14;
+  border: 1px solid #010a14; */
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #20c67a;
 }
 
 h4 {
   text-align: justify;
   margin-top: 0%;
   margin-bottom: 0%;
+  
 }
 
 .formula-container {
@@ -97,16 +108,19 @@ h4 {
 
 .formula, .result {
   /* font-weight: bold; */
-  color: #223026;
+  /* color: #223026; */
+  color: white;
 }
 
 .formula-description, .result-description {
-  color: #3f8880;
+  /* color: #3f8880; */
+  color: #c6206c;
   font-weight: bold;
 }
 
 .result span {
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
+  border-bottom: 1px solid white;
 }
 
 .box {
