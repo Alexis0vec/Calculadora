@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PFCM</title>
+    <link rel="stylesheet" href="/Models/styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="model-menu">
+            <ul>
+              <li><a href="/Models/html/PICM.html">PICM</a></li>
+              <li><a href="/index.html">PFCM</a></li>
+            </ul>
+        </nav>
+        <div class="section">
+            <div class="calculator">
+                <h1>MODELO MATEMÁTICO PICM - M/M/k - PARÁMETROS DEL MODELO</h1>
+                <div class="box">
+                    <label for="input5">M :</label>
+                    <input type="number" id="input1" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+                    title="Ingresa números enteros o decimales" required placeholder="Ingrese M">
+                    <label for="input6">λ :</label>
+                    <input type="number" id="input2" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+                    title="Ingresa números enteros o decimales" required placeholder="Ingrese λ">
+                    <label for="input7">µ:</label>
+                    <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+                    title="Ingresa números enteros o decimales" required placeholder="Ingrese µ">
+                    <br /> 
+                    <label for="input8">k :</label>
+                    <input type="number" id="input4" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+                    title="Ingresa números enteros o decimales" required placeholder="Ingrese k">
+                    <label for="input9">n :</label>
+                    <input type="number" id="input5" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+                    title="Ingresa números enteros o decimales" required placeholder="Ingrese n">
+                    <br />
+                    <button onclick="calcularResultado1()">Calcular</button>
+                </div>      
+                <h4>Probabilidad de hallar el sistema completamente vacío</h4>
+                <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">P₀ = <span id="P0">&nbsp;</span></p>
+                </div>
+            
+                <h4>Probabilidad de hallar n clientes el sistema</h4>
+                <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">Pn = <span id="Pk">&nbsp;</span></p>
+                </div>
+            
+                <h4>Probabilidad de que un usuario que llega, tenga que esperar</h4>
+                <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">Pɛ = <span id="PNE">&nbsp;</span></p>
+                </div>
+
+                <h4>Probabilidad de que un usuario que llega, tenga que esperar</h4>
+                <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">Pɴɛ = <span id="PNE">&nbsp;</span></p>
+                </div>
+            
+                <h4>Probabilidad de que un usuario que llega no tenga que esperar</h4>
+                <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">L = <span id="L">&nbsp;</span></p>
+                </div>
+                
+                <h4>Número esperado de clientes en el sistema</h4>
+                <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">Lq = <span id="Lq">&nbsp;</span></p>
+                </div>
+                
+                <h4>Número esperado de clientes en la cola</h4>
+                <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">Ln = <span id="Ln">&nbsp;</span></p>
+                </div>
+            
+                <h4>Número esperado de clientes en la cola no vacía</h4>
+                <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">W = <span id="W">&nbsp;</span></p>
+                </div>
+                
+                <h4>Tiempo esperado en el sistema</h4>
+                <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">Wq = <span id="Wq">&nbsp;</span></p>
+                </div>
+                
+                <h4>Tiempo esperado en cola</h4>
+                <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">Wn = <span id="Wn">&nbsp;</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="calculator">
+              <h2>Costos</h2>
+              <div class="box">
+                <label for="input5">Horas :</label>
+                <input type="number" id="input5" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+                title="Ingresa números enteros o decimales" required placeholder="Ingrese horas">
+                <label for="input6">CTE :</label>
+                <input type="number" id="input6" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+                title="Ingresa números enteros o decimales" required placeholder="Ingrese CTE">
+                <label for="input7">CTS :</label>
+                <input type="number" id="input7" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+                title="Ingresa números enteros o decimales" required placeholder="Ingrese CTS">
+                <br /> 
+                <label for="input8">CTSE :</label>
+                <input type="number" id="input8" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+                title="Ingresa números enteros o decimales" required placeholder="Ingrese CTSE">
+                <label for="input9">CS :</label>
+                <input type="number" id="input9" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+                title="Ingresa números enteros o decimales" required placeholder="Ingrese CS">
+                <br />
+                <button onclick="calcularResultado3()">Calcular</button>
+              </div>
+                    
+              <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">CT(TE) = <span id="CTTE">&nbsp;</span></p>
+              </div>  
+                
+              <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">CT(TS) = <span id="CTTS">&nbsp;</span></p>
+              </div>  
+                
+              <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">CT(TSE) = <span id="CTTSer">&nbsp;</span></p>
+              </div>  
+                
+              <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">CT(S) = <span id="CTS">&nbsp;</span></p>
+              </div>  
+          <br />
+              <h4>Costo Total Diario del Sistema :</h4>
+              <div class="formula-container">
+                <p class="result-description">Resultado:</p>
+                <p class="result">CT = <span id="CT">&nbsp;</span></p>
+              </div> 
+            </div>
+        </div> 
+    </div> 
+    <script src="/Models/js/script.js"></script>
+  </div>
+    </div>
+        
+    
+</body>
+</html>

@@ -272,67 +272,67 @@
     document.getElementById("CT").textContent = "CT = " + ct.toFixed(3);
   }
   
-  // function calcularResultado4() {
-  //   const input1 = document.getElementById("inputM").value;
-  //   const input2 = document.getElementById("inputL").value;
-  //   const input3 = document.getElementById("inputU").value;
-  //   const input4 = document.getElementById("inputK").value;
-  //   const input5 = document.getElementById("inputN").value;
+  function calcularResultado4() {
+    const input1 = document.getElementById("inputM").value;
+    const input2 = document.getElementById("inputL").value;
+    const input3 = document.getElementById("inputU").value;
+    const input4 = document.getElementById("inputK").value;
+    const input5 = document.getElementById("inputN").value;
   
-  //   //Valores
-  //   const poblacion = Number(input1);
-  //   const lambda = Number(input2);
-  //   const mu = Number(input3);
-  //   const k = Number(input4);
-  //   const n = Number(input5);
+    //Valores
+    const poblacion = Number(input1);
+    const lambda = Number(input2);
+    const mu = Number(input3);
+    const k = Number(input4);
+    const n = Number(input5);
   
-  //   let pn =0;
+    let pn =0;
   
-  //   //Calcular P0
-  //   const p0 = calcularP0F(lambda, mu, k, poblacion);
-  //   document.getElementById("P0-F").textContent = "P0 = " + p0.toFixed(3);
+    //Calcular P0
+    const p0 = calcularP0F(lambda, mu, k, poblacion);
+    document.getElementById("P0-F").textContent = "P0 = " + p0.toFixed(3);
   
-  //   //Calcular Pn
-  //   if(n < k){
-  //      pn = calcularPnF(lambda, mu, n, poblacion, k);
-  //     document.getElementById("Pn-F").textContent = "Pn = " + pn.toFixed(2);
-  //     console.log("entro0");
-  //   }else{
-  //     pn = calcularPnF2(lambda, mu, k,n, poblacion);
-  //     document.getElementById("Pn-F").textContent = "Pn = " + pn.toFixed(3);
-  //   }
+    //Calcular Pn
+    if(n < k){
+       pn = calcularPnF(lambda, mu, n, poblacion, k);
+      document.getElementById("Pn-F").textContent = "Pn = " + pn.toFixed(2);
+      console.log("entro0");
+    }else{
+      pn = calcularPnF2(lambda, mu, k,n, poblacion);
+      document.getElementById("Pn-F").textContent = "Pn = " + pn.toFixed(3);
+    }
   
-  //   //Calcular PE
-  //   const pe = 1 - calcularPEF(k, lambda, mu, poblacion);
-  //   document.getElementById("PE-F").textContent = "PE = " + pe.toFixed(3);
+    //Calcular PE
+    const pe = 1 - calcularPEF(k, lambda, mu, poblacion);
+    document.getElementById("PE-F").textContent = "PE = " + pe.toFixed(3);
   
-  //   //Calcular PNE
-  //   const pne = 1 -pe;
-  //   document.getElementById("PNE-F").textContent = "PNE = " + pne.toFixed(3);
+    //Calcular PNE
+    const pne = 1 -pe;
+    document.getElementById("PNE-F").textContent = "PNE = " + pne.toFixed(3);
   
-  //   //Calcular L
-  //   const l = calcularLF(k, lambda, mu, poblacion);
-  //   document.getElementById("L-F").textContent = "L = " + l.toFixed(3);
+    //Calcular L
+    const l = calcularLF(k, lambda, mu, poblacion);
+    document.getElementById("L-F").textContent = "L = " + l.toFixed(3);
   
-  //   //Calcular Lq
-  //   const lq = calcularLqF(k, lambda, mu, poblacion);
-  //   document.getElementById("Lq-F").textContent = "Lq = " + lq.toFixed(3);
+    //Calcular Lq
+    const lq = calcularLqF(k, lambda, mu, poblacion);
+    document.getElementById("Lq-F").textContent = "Lq = " + lq.toFixed(3);
   
-  //   //Calcular Ln
-  //   const ln = lq / pe;
-  //   document.getElementById("Ln-F").textContent = "Ln = " + ln.toFixed(3);
+    //Calcular Ln
+    const ln = lq / pe;
+    document.getElementById("Ln-F").textContent = "Ln = " + ln.toFixed(3);
   
-  //   //Calcular Wq
-  //   const wq = lq / ((poblacion - l) * lambda);
-  //   document.getElementById("Wq-F").textContent = "Wq = " + wq.toFixed(3); 
+    //Calcular Wq
+    const wq = lq / ((poblacion - l) * lambda);
+    document.getElementById("Wq-F").textContent = "Wq = " + wq.toFixed(3); 
   
-  //   //Calcular W
-  //   const w = wq + (1 / mu);
-  //   document.getElementById("W-F").textContent = "W = " + w.toFixed(3);
+    //Calcular W
+    const w = wq + (1 / mu);
+    document.getElementById("W-F").textContent = "W = " + w.toFixed(3);
   
-  //   //Calcular Wn
-  //   const wn = wq / pe;
-  //   document.getElementById("Wn-F").textContent = "Wn = " + wn.toFixed(3);
+    //Calcular Wn
+    const wn = wq / pe;
+    document.getElementById("Wn-F").textContent = "Wn = " + wn.toFixed(3);
   
   
     
@@ -340,62 +340,62 @@
   
   
   
-  // }
+  }
 
-  // function calcularResultado5() {
-  //   const input1 = document.getElementById("inputL").value;
-  //   const input2 = document.getElementById("inputU").value;
-  //   const input3 = document.getElementById("inputK").value;
-  //   const input4 = document.getElementById("inputN").value;
-  //   const inputM = document.getElementById("inputM").value;
+  function calcularResultado5() {
+    const input1 = document.getElementById("inputL").value;
+    const input2 = document.getElementById("inputU").value;
+    const input3 = document.getElementById("inputK").value;
+    const input4 = document.getElementById("inputN").value;
+    const inputM = document.getElementById("inputM").value;
   
-  //   const input5 = document.getElementById("input10").value;
-  //   const input6 = document.getElementById("input11").value;
-  //   const input7 = document.getElementById("input12").value;
-  //   const input8 = document.getElementById("input13").value;
-  //   const input9 = document.getElementById("input14").value;
+    const input5 = document.getElementById("input10").value;
+    const input6 = document.getElementById("input11").value;
+    const input7 = document.getElementById("input12").value;
+    const input8 = document.getElementById("input13").value;
+    const input9 = document.getElementById("input14").value;
   
-  //   //Valores
-  //   const lambda = Number(input1);
-  //   const mu = Number(input2);
-  //   const k = Number(input3);
-  //   const n = Number(input4);
-  //   const poblacion = Number(inputM);
+    //Valores
+    const lambda = Number(input1);
+    const mu = Number(input2);
+    const k = Number(input3);
+    const n = Number(input4);
+    const poblacion = Number(inputM);
   
-  //   //Costos
-  //   const horas = Number(input5);
-  //   const costoEsperaCola = Number(input6);
-  //   const costoSistema = Number(input7);
-  //   const costoServicio = Number(input8);
-  //   const costoServidor = Number(input9);
+    //Costos
+    const horas = Number(input5);
+    const costoEsperaCola = Number(input6);
+    const costoSistema = Number(input7);
+    const costoServicio = Number(input8);
+    const costoServidor = Number(input9);
   
-  //   const pe = 1 - calcularPEF(k, lambda, mu, poblacion);
+    const pe = 1 - calcularPEF(k, lambda, mu, poblacion);
   
-  //   //Calcular CTTE
-  //   const lq = calcularLqF(k, lambda, mu, poblacion);
-  //   const l = calcularLF(k, lambda, mu, poblacion);
-  //   const wq = lq / ((poblacion - l) * lambda);
+    //Calcular CTTE
+    const lq = calcularLqF(k, lambda, mu, poblacion);
+    const l = calcularLF(k, lambda, mu, poblacion);
+    const wq = lq / ((poblacion - l) * lambda);
   
-  //   const ctte = lambda * horas * wq * costoEsperaCola;
-  //   document.getElementById("CTTE2").textContent = "CTTE = " + ctte.toFixed(3);
+    const ctte = lambda * horas * wq * costoEsperaCola;
+    document.getElementById("CTTE2").textContent = "CTTE = " + ctte.toFixed(3);
   
-  //   //Calcular CTTS
+    //Calcular CTTS
     
-  //   const tiempoSistema = lq + (1/mu);
+    const tiempoSistema = lq + (1/mu);
   
-  //   const ctts = lambda * horas * tiempoSistema * costoSistema;
-  //   document.getElementById("CTTS2").textContent = "CTTS = " + ctts.toFixed(3);
+    const ctts = lambda * horas * tiempoSistema * costoSistema;
+    document.getElementById("CTTS2").textContent = "CTTS = " + ctts.toFixed(3);
   
-  //   //Calcularr CTTSer
-  //   const tiempo = 1/mu;
-  //   const cttserv = lambda * horas * tiempo * costoServicio;
-  //   document.getElementById("CTTSer2").textContent = "CTTSer = " + cttserv.toFixed(3);
+    //Calcularr CTTSer
+    const tiempo = 1/mu;
+    const cttserv = lambda * horas * tiempo * costoServicio;
+    document.getElementById("CTTSer2").textContent = "CTTSer = " + cttserv.toFixed(3);
   
-  //   //Calcular CTS
-  //   const cts = k * costoServidor * horas;
-  //   document.getElementById("CTS2").textContent = "CTS = " + cts.toFixed(3);
+    //Calcular CTS
+    const cts = k * costoServidor * horas;
+    document.getElementById("CTS2").textContent = "CTS = " + cts.toFixed(3);
   
-  //   //Calcular CT
-  //   const ct = ctte + ctts + cttserv + cts;
-  //   document.getElementById("CT2").textContent = "CT = " + ct.toFixed(3);
-  // }
+    //Calcular CT
+    const ct = ctte + ctts + cttserv + cts;
+    document.getElementById("CT2").textContent = "CT = " + ct.toFixed(3);
+  }

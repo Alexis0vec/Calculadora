@@ -6,11 +6,10 @@ body {
 }
 
 .model-menu {
-  /* background-color: #333; */
   background-color: #20c67a;
   overflow: hidden;
   position: fixed;
-  width: 100%;
+  width: 99%;
   height: 5.6%;  
 }
 
@@ -28,7 +27,6 @@ body {
 .model-menu a {
   display: block;
   color: white;
-  /* color: #333; */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -36,17 +34,16 @@ body {
 
 .model-menu a:hover {
   background-color: white;
-  /* color: black; */
   color: #20c67a;
 }
 
 .calculator {
   text-align: center;
-  /* background-color: #eee; */
   background-color: #333;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .calculator h1{
@@ -69,19 +66,17 @@ input, select, button {
 
 button {
   cursor: pointer;
-  background-color: #20c67a;
-  color: #fff;
   border: 1px solid #20c67a;
   transition: background-color 0.3s ease;
   width: 18%;
   font-size: 18px;
+  background-color: #20c67a;
+  color: #fff;;
+  border: 1px solid #20c67a;
 }
 
 button:hover {
-  /* background-color: #010a14;
-  border: 1px solid #010a14; */
   background-color: #fff;
-  border: 1px solid #fff;
   color: #20c67a;
 }
 
@@ -107,22 +102,51 @@ h4 {
 }
 
 .formula, .result {
-  /* font-weight: bold; */
-  /* color: #223026; */
   color: white;
 }
 
 .formula-description, .result-description {
-  /* color: #3f8880; */
   color: #c6206c;
   font-weight: bold;
 }
 
 .result span {
-  /* border-bottom: 1px solid #000; */
   border-bottom: 1px solid white;
 }
 
 .box {
   padding-bottom: 15px;
 }
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  .calculator {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .model-menu ul {
+    text-align: center;
+  }
+
+  .model-menu li {
+    float: none;
+    display: inline-block;
+  }
+
+  .formula-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container {
+  width: 99%;
+  margin: 0 auto;
+}
+
+
+
+
