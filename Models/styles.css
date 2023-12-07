@@ -1,0 +1,152 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #fefefe;
+  color: white;
+}
+
+.model-menu {
+  background-color: #20c67a;
+  overflow: hidden;
+  position: fixed;
+  width: 99%;
+  height: 5.6%;  
+}
+
+.model-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.model-menu li {
+  float: left;
+}
+
+.model-menu a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.model-menu a:hover {
+  background-color: white;
+  color: #20c67a;
+}
+
+.calculator {
+  text-align: center;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.calculator h1{
+  margin-top: 5%;
+  color: #fff;
+}
+
+.calculator h2{
+  margin-top: 0;
+}
+
+
+input, select, button {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #20c67a;
+  transition: background-color 0.3s ease;
+  width: 18%;
+  font-size: 18px;
+  background-color: #20c67a;
+  color: #fff;;
+  border: 1px solid #20c67a;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #20c67a;
+}
+
+h4 {
+  text-align: justify;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  
+}
+
+.formula-container {
+  justify-content: right;
+  align-items: center;
+  text-align: justify;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 10px;
+  padding-bottom: 20px;
+}
+
+.formula-description, .formula, .result-description, .result {
+  margin: 5px 0;
+}
+
+.formula, .result {
+  color: white;
+}
+
+.formula-description, .result-description {
+  color: #c6206c;
+  font-weight: bold;
+}
+
+.result span {
+  border-bottom: 1px solid white;
+}
+
+.box {
+  padding-bottom: 15px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  .calculator {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .model-menu ul {
+    text-align: center;
+  }
+
+  .model-menu li {
+    float: none;
+    display: inline-block;
+  }
+
+  .formula-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container {
+  width: 99%;
+  margin: 0 auto;
+}
+
+
+
+
