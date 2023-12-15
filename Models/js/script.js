@@ -263,7 +263,7 @@
     const cttserv = lambda * horas * tiempo.toFixed(3) * costoServicio;
     document.getElementById("CTTSer").textContent = "CTTSer = " + cttserv.toFixed(3);
   
-    //Calcular CTS
+    //Calcular CTS diario
     const cts = k * costoServidor * horas;
     document.getElementById("CTS").textContent = "CTS = " + cts.toFixed(3);
   
