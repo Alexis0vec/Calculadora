@@ -18,17 +18,26 @@
     </nav>
     <div class="section">
       <div class="calculator">
-        <h1>MODELO MATEMÁTICO PICM - M/M/k - PARÁMETROS DEL MODELO</h1>
+        <h1>POBLACION INFINITA CANAL MULTIPLE</h1>
         <div class="box">
-          <label for="input1">λ :</label>
-          <input type="number" id="input1" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-          title="Ingresa números enteros o decimales" required placeholder="Ingrese λ">
-          <label for="input2">µ :</label>
-          <input type="number" id="input2" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-          title="Ingresa números enteros o decimales" required placeholder="Ingrese μ">
-          <label for="input3">k :</label>
-          <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-          title="Ingresa números enteros o decimales" required placeholder="Ingrese k">
+          <div>
+            <label for="input1">λ :</label>
+            <input type="number" id="input1" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+            title="Ingresa números enteros o decimales" required placeholder="Ingrese λ">
+          </div>
+         
+          <div>
+            <label for="input2">µ :</label>
+            <input type="number" id="input2" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+            title="Ingresa números enteros o decimales" required placeholder="Ingrese μ">
+          </div>
+          
+          <div>
+            <label for="input3">k :</label>
+            <input type="number" id="input3" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+            title="Ingresa números enteros o decimales" required placeholder="Ingrese k">
+          </div>
+          
           <br>
           <button onclick="calculoUno()">Calcular</button>
         </div>
@@ -110,23 +119,31 @@
     <div class="calculator">
       <h2>Costos</h2>
       <div class="box">
-        <label for="input5">Horas :</label>
-        <input type="number" id="input5" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-        title="Ingresa números enteros o decimales" required placeholder="Ingrese horas">
-        <label for="input6">CTE :</label>
-        <input type="number" id="input6" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-        title="Ingresa números enteros o decimales" required placeholder="Ingrese CTE">
-        <label for="input7">CTS :</label>
-        <input type="number" id="input7" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-        title="Ingresa números enteros o decimales" required placeholder="Ingrese CTS">
-        <br /> 
-        <label for="input8">CTSE :</label>
-        <input type="number" id="input8" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-        title="Ingresa números enteros o decimales" required placeholder="Ingrese CTSE">
-        <label for="input9">CS :</label>
-        <input type="number" id="input9" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
-        title="Ingresa números enteros o decimales" required placeholder="Ingrese CS">
-        <br />
+        <div>
+          <label for="input5">Horas :</label>
+          <input type="number" id="input5" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+          title="Ingresa números enteros o decimales" required placeholder="Ingrese horas">
+        </div>
+        <div>
+          <label for="input6">CTE :</label>
+          <input type="number" id="input6" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+          title="Ingresa números enteros o decimales" required placeholder="Ingrese CTE">
+        </div>
+        <div>
+          <label for="input7">CTS :</label>
+          <input type="number" id="input7" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+          title="Ingresa números enteros o decimales" required placeholder="Ingrese CTS">
+        </div>
+        <div>
+          <label for="input8">CTSE :</label>
+          <input type="number" id="input8" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+          title="Ingresa números enteros o decimales" required placeholder="Ingrese CTSE">
+        </div>
+        <div>
+          <label for="input9">CS :</label>
+          <input type="number" id="input9" min="0" step="any" pattern="[0-9]+([.,][0-9]+)?" 
+          title="Ingresa números enteros o decimales" required placeholder="Ingrese CS">
+        </div>
         <button onclick="calcularResultado3()">Calcular</button>
       </div>
             

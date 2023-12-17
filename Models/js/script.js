@@ -271,7 +271,110 @@
     const ct = ctte + ctts + cttserv + cts;
     document.getElementById("CT").textContent = "CT = " + ct.toFixed(3);
   }
+  ///////////////////////////////////////////////
+  function calcularLqF(k, lambda, mu, poblacion) {
+    let sumatoria =0;
   
+    for (let i = k; i <= poblacion; i++) {
+      sumatoria += (i - k) * calcularPnF2(lambda, mu, k, i, poblacion);
+    }
+    return sumatoria;
+  }
+  
+  function calcularLF(k, lambda, mu, poblacion) {
+    let sumatoria1 =0;
+    let sumatoria2 =0;
+    let sumatoria3 =0;
+    let n = k-1;
+    let producto=0;
+    let total2=0;
+  
+    for (let i = 0; i <= n; i++) {
+      producto = i * calcularPnF(lambda, mu, i, poblacion, k);
+      sumatoria1 += producto;
+    }
+    console.log(sumatoria1)
+    for (let i = k; i <= poblacion; i++) {
+        producto = (i - k) * calcularPnF2(lambda, mu, k, i, poblacion);
+        sumatoria2 += producto;
+    }
+    console.log(sumatoria2)
+  
+    for (let i = 0; i <= n; i++) {
+      sumatoria3 += calcularPnF(lambda, mu, i, poblacion, k);
+    }
+    total2 = sumatoria1 + sumatoria2 + k * (1 - sumatoria3);
+  
+    return total2;
+  }
+  
+  function calcularPEF(k , lambda, mu, poblacion) {
+    console.log("entro PE");
+    let sumatoria = 0;
+    for (let i = 0; i <= (k-1); i++) {
+      if(i < k){
+        sumatoria += calcularPnF(lambda, mu, i, poblacion, k);
+      }else{
+  
+        sumatoria += calcularPnF2(lambda, mu, k, i,poblacion);
+      }
+    }
+    console.log(sumatoria);
+    return sumatoria;
+  }
+  
+  function calcularPnF(l,mu,n,poblacion,k){
+    let p0 = calcularP0F(l, mu, k, poblacion);
+    let part2 = factorial(poblacion) / (factorial(poblacion - n) * factorial(n));
+    let pn = p0 * part2 * exponenciacion(l, mu, n);
+    return pn;
+  }
+  
+  function calcularPnF2(l, m, k, n, poblacion) {
+    let p0 = calcularP0F(l, m, k, poblacion);
+    let part2 = factorial(poblacion) / ((factorial(poblacion - n)) * factorial(k) * exponenciacionSinFraccion(k, n - k));
+    let pn = p0 * part2 * exponenciacion(l, m, n);
+    return pn;
+  }
+  
+  
+  function calcularP0F(l, m, k, poblacion) {
+    let n = k - 1;
+    let mFactorial = factorial(poblacion);
+    console.log(mFactorial)
+    let fraccion1 = 0;
+    let part1 = 0;
+    let total1=0;
+  
+  
+    //parte dos
+  
+    let total2 = 0;
+  
+  
+  
+    for(let i = 0; i <= n; i++){
+      fraccion1 = mFactorial / (factorial(poblacion - i) * factorial(i));
+  
+      part1 = fraccion1 * exponenciacion(l, m, i);
+      total1 += part1;
+    }
+    console.log(total1);
+  
+    for (let i = k; i <= poblacion; i++) {
+      fraccion1 = mFactorial / ( factorial(poblacion - i) * factorial(k) * exponenciacionSinFraccion(k,i-k));
+      part1 = fraccion1 * exponenciacion(l, m, i);
+      total2 += part1;
+    }
+    console.log(total2);
+  
+    return  1/(total1 + total2) ;
+  
+  
+  
+  }
+
+  ////////////////////////////////////////////////
   function calcularResultado4() {
     const input1 = document.getElementById("inputM").value;
     const input2 = document.getElementById("inputL").value;
@@ -290,55 +393,49 @@
   
     //Calcular P0
     const p0 = calcularP0F(lambda, mu, k, poblacion);
-    document.getElementById("P0-F").textContent = "P0 = " + p0.toFixed(3);
+    document.getElementById("P0-F").innerText = p0.toFixed(3);
   
     //Calcular Pn
     if(n < k){
        pn = calcularPnF(lambda, mu, n, poblacion, k);
-      document.getElementById("Pn-F").textContent = "Pn = " + pn.toFixed(2);
+      document.getElementById("Pn-F").innerText = pn.toFixed(2);
       console.log("entro0");
     }else{
       pn = calcularPnF2(lambda, mu, k,n, poblacion);
-      document.getElementById("Pn-F").textContent = "Pn = " + pn.toFixed(3);
+      document.getElementById("Pn-F").innerText = pn.toFixed(3);
     }
   
     //Calcular PE
     const pe = 1 - calcularPEF(k, lambda, mu, poblacion);
-    document.getElementById("PE-F").textContent = "PE = " + pe.toFixed(3);
+    document.getElementById("PE-F").innerText = pe.toFixed(3);
   
     //Calcular PNE
     const pne = 1 -pe;
-    document.getElementById("PNE-F").textContent = "PNE = " + pne.toFixed(3);
+    document.getElementById("PNE-F").innerText = pne.toFixed(3);
   
     //Calcular L
     const l = calcularLF(k, lambda, mu, poblacion);
-    document.getElementById("L-F").textContent = "L = " + l.toFixed(3);
+    document.getElementById("L-F").innerText = l.toFixed(3);
   
     //Calcular Lq
     const lq = calcularLqF(k, lambda, mu, poblacion);
-    document.getElementById("Lq-F").textContent = "Lq = " + lq.toFixed(3);
+    document.getElementById("Lq-F").innerText = lq.toFixed(3);
   
     //Calcular Ln
     const ln = lq / pe;
-    document.getElementById("Ln-F").textContent = "Ln = " + ln.toFixed(3);
+    document.getElementById("Ln-F").innerText = ln.toFixed(3);
   
     //Calcular Wq
     const wq = lq / ((poblacion - l) * lambda);
-    document.getElementById("Wq-F").textContent = "Wq = " + wq.toFixed(3); 
+    document.getElementById("Wq-F").innerText = wq.toFixed(3); 
   
     //Calcular W
     const w = wq + (1 / mu);
-    document.getElementById("W-F").textContent = "W = " + w.toFixed(3);
+    document.getElementById("W-F").innerText = w.toFixed(3);
   
     //Calcular Wn
     const wn = wq / pe;
-    document.getElementById("Wn-F").textContent = "Wn = " + wn.toFixed(3);
-  
-  
-    
-  
-  
-  
+    document.getElementById("Wn-F").innerText = wn.toFixed(3);
   
   }
 
@@ -377,25 +474,25 @@
     const wq = lq / ((poblacion - l) * lambda);
   
     const ctte = lambda * horas * wq * costoEsperaCola;
-    document.getElementById("CTTE2").textContent = "CTTE = " + ctte.toFixed(3);
+    document.getElementById("CTTE2").innerText = ctte.toFixed(3);
   
     //Calcular CTTS
     
     const tiempoSistema = lq + (1/mu);
   
     const ctts = lambda * horas * tiempoSistema * costoSistema;
-    document.getElementById("CTTS2").textContent = "CTTS = " + ctts.toFixed(3);
+    document.getElementById("CTTS2").innerText = ctts.toFixed(3);
   
     //Calcularr CTTSer
     const tiempo = 1/mu;
     const cttserv = lambda * horas * tiempo * costoServicio;
-    document.getElementById("CTTSer2").textContent = "CTTSer = " + cttserv.toFixed(3);
+    document.getElementById("CTTSer2").innerText = cttserv.toFixed(3);
   
     //Calcular CTS
     const cts = k * costoServidor * horas;
-    document.getElementById("CTS2").textContent = "CTS = " + cts.toFixed(3);
+    document.getElementById("CTS2").innerText = cts.toFixed(3);
   
     //Calcular CT
     const ct = ctte + ctts + cttserv + cts;
-    document.getElementById("CT2").textContent = "CT = " + ct.toFixed(3);
+    document.getElementById("CT2").innerText = ct.toFixed(3);
   }
